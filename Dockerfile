@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
 #Set Nodejs version
+# Add note for test action CI
 ARG NODE_VERSION=18.0.0
 
 FROM node:${NODE_VERSION}-alpine as base
