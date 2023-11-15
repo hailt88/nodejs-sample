@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-
+#Set Nodejs version
 ARG NODE_VERSION=18.0.0
 
 FROM node:${NODE_VERSION}-alpine as base
@@ -34,3 +34,4 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 USER node
 COPY . .
 RUN npm run test
+# end Dockerfile
